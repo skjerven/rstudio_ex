@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+  rstudio:
+    restart: always
+    image: bskjerven/oz_sc:latest
+    container_name: rstudio
+    volumes:
+      - "$HOME/rstudio_ex/data:/home/rstudio/data"
+    ports:
+      - 8787:8787
+    environment:
+      - USER=rstudio
+      - PASSWORD=rstudio
